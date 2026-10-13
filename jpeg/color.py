@@ -3,6 +3,9 @@ import numpy as np
 def rgb_to_ycbcr(rgb):
     rgb = rgb.astype(np.float64)
 
+    #image_array[row, column] => single pixel
+    #image_array[row, column, channel] => the rgb channel of a single pixel
+    #channel : 0->R, 1->G, 2->B
     r = rgb[:, :, 0]
     g = rgb[:, :, 1]
     b = rgb[:, :, 2]
